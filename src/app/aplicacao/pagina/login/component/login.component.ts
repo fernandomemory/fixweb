@@ -31,9 +31,15 @@ export class LoginComponent implements OnInit {
        if(response['acesso'] == 1){
          var r = 'cliente';
        }
-       this.storageService.saveUser(response['auth'], response['accessToken'], r);
+       
+       this.storageService.saveUser(response['auth'], response['accessToken'], r, response['id']);
        this.router.navigate([resu]);
-     })
+
+     },(error) => {                              //Error callback
+      // console.error(error)
+      this.messageService.add({ severity: Severity.ERROR, summary: Summary.ERROR, detail: 'Usuário não encontrado'});
+      //throw error;   //You can also throw the error to a global error handler
+    })
       // this.loginService.autenticarUsuario(this.usuario).subscribe({
       //   next: result => {
       //     console.log(result);

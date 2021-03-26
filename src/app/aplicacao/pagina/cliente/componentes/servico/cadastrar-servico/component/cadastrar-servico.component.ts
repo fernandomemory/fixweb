@@ -6,7 +6,7 @@ import { Taxa } from '../../../../../../model/Taxa';
 import { ServicoService } from 'src/app/aplicacao/pagina/administrador/componentes/servico/service/servico.service';
 import { TaxaService } from 'src/app/aplicacao/pagina/administrador/componentes/taxa/service/taxa.service';
 import { ServicoCliente } from '../../model/ServicoCliente';
-
+ 
 @Component({
   selector: 'app-cadastrar-servico',
   templateUrl: './cadastrar-servico.component.html',

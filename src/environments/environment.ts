@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  url: 'http://lambafolia1-com.umbler.net'
+  url: 'https://lambafolia1-com.umbler.net'
   
 };
 

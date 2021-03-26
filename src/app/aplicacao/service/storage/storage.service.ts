@@ -47,10 +47,11 @@ export class StorageService {
     return window.sessionStorage.getItem(Storage.AUTHORITIES);
   }
 
-  public saveUser(user: any, token: any, authorities: any) {
+  public saveUser(user: any, token: any, authorities: any, id:any) {
     localStorage.setItem('login', user); 
     localStorage.setItem('token',token);
     localStorage.setItem('authorities', authorities);
+    localStorage.setItem('idusuario', id);
   }
 
   public removeUser() {
@@ -70,6 +71,10 @@ export class StorageService {
 
   public getToken(): any {
     return localStorage.getItem('token');
+  }
+
+  public idusuario(): any {
+    return localStorage.getItem('idusuario');
   }
 
   public getLogin(): any {
